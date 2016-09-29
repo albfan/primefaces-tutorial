@@ -13,8 +13,8 @@ public class LoginBean implements Serializable {
   private String clave;
   private boolean logeado = false;
 
-  private String nombreValido = "admin";
-  private String claveValida = "admin";
+  private String nombreValido = "prime";
+  private String claveValida = "faces";
   
   public boolean estaLogeado() {
     return logeado;
