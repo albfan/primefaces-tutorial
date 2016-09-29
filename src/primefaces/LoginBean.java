@@ -13,6 +13,9 @@ public class LoginBean implements Serializable {
   private String clave;
   private boolean logeado = false;
 
+  private String nombreValido = "admin";
+  private String claveValida = "admin";
+  
   public boolean estaLogeado() {
     return logeado;
   }
@@ -36,8 +39,8 @@ public class LoginBean implements Serializable {
   public void login(ActionEvent actionEvent) {
     RequestContext context = RequestContext.getCurrentInstance();
     FacesMessage msg = null;
-    if (nombre != null && nombre.equals("admin") && clave != null
-        && clave.equals("admin")) {
+    if (nombre != null && nombre.equals(nombreValido) && clave != null
+        && clave.equals(claveValida)) {
       logeado = true;
       msg = new FacesMessage(FacesMessage.SEVERITY_INFO, "Bienvenid@", nombre);
     } else {
