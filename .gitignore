@@ -1,1 +1,8 @@
 /build/
+/target/
+/out/
+.idea
+/*.iml
+.project
+.classpath
+.settings/
